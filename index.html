@@ -547,117 +547,136 @@ Complete the application below and we'll contact you as soon as possible regardi
 
 <div class="application-box">
 
-<form>
+<form id="reservation-form" action="https://script.google.com/macros/s/AKfycbyfX1-ZGWMaFE4bLPNIHZ8wzd3DzA9Aa1J5a2SRIMfy0Gjwab9FWlmGI_h3vo46CaftgQ/exec" method="POST">
 
 <div class="form-row">
 
 <div class="input-box">
 <label>Full Name</label>
-<input type="text" placeholder="Enter your full name" required>
+<input type="text" name="fullname" placeholder="Enter your full name" required>
 </div>
 
 <div class="input-box">
 <label>Email Address</label>
-<input type="email" placeholder="Enter your email" required>
+<input type="email" name="email" placeholder="Enter your email" required>
 </div>
 
 </div>
+
 
 <div class="form-row">
 
 <div class="input-box">
 <label>Phone Number</label>
-<input type="tel" placeholder="Enter your phone number">
+<input type="tel" name="phone" placeholder="Enter your phone number" required>
 </div>
 
 <div class="input-box">
 <label>Country</label>
-<input type="text" placeholder="Country">
+<input type="text" name="country" placeholder="Country">
 </div>
 
 </div>
+
 
 <div class="form-row">
 
 <div class="input-box">
 <label>State</label>
-<input type="text" placeholder="State">
+<input type="text" name="state" placeholder="State">
 </div>
 
 <div class="input-box">
 <label>City</label>
-<input type="text" placeholder="City">
+<input type="text" name="city" placeholder="City">
 </div>
 
 </div>
+
 
 <div class="input-box">
 <label>Full Address</label>
-<input type="text" placeholder="Street Address">
+<input type="text" name="address" placeholder="Street Address">
 </div>
+
 
 <div class="input-box">
 <label>Which Puppy Are You Interested In?</label>
 
-<select>
+<select name="puppy" required>
 
-<option>Select a Puppy</option>
+<option value="">Select a Puppy</option>
 
-<option>Bella</option>
+<option value="Bella">Bella</option>
 
-<option>Coco</option>
+<option value="Coco">Coco</option>
 
-<option>Luna</option>
+<option value="Luna">Luna</option>
 
-<option>Other</option>
+<option value="Other">Other</option>
 
 </select>
 
 </div>
+
 
 <h3>Preferred Delivery Option</h3>
 
 <div class="radio-group">
 
 <label>
-<input type="radio" name="delivery">
+<input type="radio" name="delivery" value="Pickup">
 Pickup
 </label>
 
 <label>
-<input type="radio" name="delivery">
+<input type="radio" name="delivery" value="Home Delivery">
 Home Delivery
 </label>
 
 </div>
 
+
 <h3>Preferred Payment Method</h3>
 
 <div class="radio-group">
 
-<label><input type="radio" name="payment"> Cash App</label>
+<label>
+<input type="radio" name="payment" value="Cash App">
+Cash App
+</label>
 
-<label><input type="radio" name="payment"> Chime</label>
+<label>
+<input type="radio" name="payment" value="Chime">
+Chime
+</label>
 
-<label><input type="radio" name="payment"> PayPal</label>
+<label>
+<input type="radio" name="payment" value="PayPal">
+PayPal
+</label>
 
-<label><input type="radio" name="payment"> Cryptocurrency</label>
+<label>
+<input type="radio" name="payment" value="Cryptocurrency">
+Cryptocurrency
+</label>
 
 </div>
+
 
 <div class="input-box">
 
 <label>Additional Information</label>
 
-<textarea placeholder="Tell us anything you'd like us to know..."></textarea>
+<textarea name="message" placeholder="Tell us anything you'd like us to know..."></textarea>
 
 </div>
 
-<button class="btn">
 
+<button type="submit" class="btn">
 Submit Application
-
 </button>
+
 
 </form>
 
@@ -918,7 +937,15 @@ Premium Chihuahua & Dachshund Puppies Raised With Love.
 
 </a>
 
-<script src="script.js"></script>
+<script>
+const form = document.getElementById("reservation-form");
+
+form.addEventListener("submit", function(){
+  setTimeout(function(){
+    alert("Thank you for your application!  We have received your request and will reach out to you shortly.");
+  }, 500);
+});
+</script>
 
 </body>
 
