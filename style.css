@@ -1,0 +1,985 @@
+/* ====================================
+   ELLIE'S TINY PAWS - STYLE PART 1
+==================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root{
+  --gold:#c8a45d;
+  --gold-dark:#b78d38;
+  --cream:#f8f4ed;
+  --white:#ffffff;
+  --brown:#4e342e;
+  --text:#555;
+  --shadow:0 15px 40px rgba(0,0,0,.10);
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:'Poppins',sans-serif;
+  background:var(--cream);
+  color:var(--text);
+  line-height:1.7;
+  overflow-x:hidden;
+}
+
+img{
+  max-width:100%;
+  display:block;
+}
+
+.container{
+  width:90%;
+  max-width:1300px;
+  margin:auto;
+}
+
+/* HEADER */
+
+header{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  background:rgba(255,255,255,.92);
+  backdrop-filter:blur(12px);
+  box-shadow:0 2px 15px rgba(0,0,0,.08);
+  z-index:1000;
+}
+
+header .container{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 0;
+}
+
+.logo h1{
+  color:var(--brown);
+  font-size:30px;
+  font-weight:800;
+}
+
+nav{
+  display:flex;
+  align-items:center;
+  gap:28px;
+}
+
+nav a{
+  text-decoration:none;
+  color:#444;
+  font-weight:600;
+  transition:.3s;
+}
+
+nav a:hover{
+  color:var(--gold);
+}
+
+.header-btn{
+  background:var(--gold);
+  color:#fff;
+  padding:14px 28px;
+  border-radius:40px;
+}
+
+.header-btn:hover{
+  background:var(--gold-dark);
+}
+
+/* HERO */
+
+.hero{
+  min-height:100vh;
+  background:
+  linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+  url("images/hero.jpg");
+  background-size:cover;
+  background-position:center;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:120px 20px;
+}
+
+.hero-content{
+  max-width:850px;
+  color:#fff;
+}
+
+.welcome{
+  display:inline-block;
+  padding:10px 24px;
+  border-radius:30px;
+  background:rgba(255,255,255,.15);
+  margin-bottom:25px;
+  letter-spacing:2px;
+  font-size:14px;
+}
+
+.hero h2{
+  font-size:64px;
+  font-weight:800;
+  line-height:1.2;
+  margin-bottom:25px;
+}
+
+.hero p{
+  font-size:22px;
+  margin-bottom:40px;
+}
+
+.hero-buttons{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.btn,
+.btn-outline{
+  display:inline-block;
+  text-decoration:none;
+  padding:16px 36px;
+  border-radius:50px;
+  font-weight:700;
+  transition:.3s;
+}
+
+.btn{
+  background:var(--gold);
+  color:#fff;
+  box-shadow:var(--shadow);
+}
+
+.btn:hover{
+  background:var(--gold-dark);
+  transform:translateY(-4px);
+}
+
+.btn-outline{
+  border:2px solid #fff;
+  color:#fff;
+}
+
+.btn-outline:hover{
+  background:#fff;
+  color:#333;
+}/* ===========================
+   STATS SECTION
+=========================== */
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:30px;
+    padding:80px 8%;
+    background:#fff;
+}
+
+.stat-box{
+    text-align:center;
+    padding:35px 25px;
+    background:#fff;
+    border-radius:20px;
+    box-shadow:var(--shadow);
+    transition:.3s;
+}
+
+.stat-box:hover{
+    transform:translateY(-10px);
+}
+
+.stat-box h3{
+    font-size:48px;
+    color:var(--gold);
+    margin-bottom:10px;
+}
+
+.stat-box p{
+    color:#666;
+    font-size:18px;
+}
+
+/* ===========================
+   SECTION TITLE
+=========================== */
+
+.section-title{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.section-title span{
+    color:var(--gold);
+    font-weight:700;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.section-title h2{
+    font-size:46px;
+    color:var(--brown);
+    margin:15px 0;
+}
+
+.section-title p{
+    max-width:800px;
+    margin:auto;
+    color:#666;
+    font-size:18px;
+}
+
+/* ===========================
+   ABOUT
+=========================== */
+
+.about{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+    padding:120px 8%;
+    background:#fdfbf8;
+}
+
+.about img{
+    width:100%;
+    border-radius:25px;
+    box-shadow:var(--shadow);
+}
+
+.about h2{
+    font-size:48px;
+    color:var(--brown);
+    margin-bottom:25px;
+}
+
+.about p{
+    font-size:18px;
+    margin-bottom:20px;
+    color:#666;
+}
+
+/* ===========================
+   WHY CHOOSE US
+=========================== */
+
+.why-us{
+    padding:120px 8%;
+    background:#fff;
+}
+
+.why-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+}
+
+.why-card{
+    background:#fff;
+    padding:40px;
+    border-radius:25px;
+    box-shadow:var(--shadow);
+    transition:.3s;
+}
+
+.why-card:hover{
+    transform:translateY(-12px);
+}
+
+.icon{
+    font-size:50px;
+    margin-bottom:20px;
+}
+
+.why-card h3{
+    color:var(--brown);
+    margin-bottom:15px;
+}
+
+.why-card p{
+    color:#666;
+}/* ===========================
+   HEALTH SECTION
+=========================== */
+
+.health{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+    padding:120px 8%;
+    background:#f8f4ed;
+}
+
+.health img{
+    width:100%;
+    border-radius:25px;
+    box-shadow:var(--shadow);
+}
+
+.health-right span{
+    color:var(--gold);
+    font-weight:700;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.health-right h2{
+    font-size:48px;
+    color:var(--brown);
+    margin:15px 0 25px;
+}
+
+.health-right p{
+    color:#666;
+    margin-bottom:25px;
+}
+
+.health-right ul{
+    list-style:none;
+    margin-bottom:35px;
+}
+
+.health-right ul li{
+    padding:12px 0;
+    font-size:17px;
+}
+
+/* ===========================
+   MEET OUR PUPPIES
+=========================== */
+
+.meet{
+    padding:120px 8%;
+    background:#fff;
+}
+
+.meet-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:35px;
+}
+
+.meet-card{
+    background:#fff;
+    border-radius:25px;
+    overflow:hidden;
+    box-shadow:var(--shadow);
+    transition:.35s;
+}
+
+.meet-card:hover{
+    transform:translateY(-10px);
+}
+
+.meet-card img{
+    width:100%;
+    height:340px;
+    object-fit:cover;
+}
+
+.meet-card h3{
+    margin:20px 25px 8px;
+    color:var(--brown);
+    font-size:26px;
+}
+
+.meet-card p{
+    margin:0 25px 25px;
+    color:#666;
+}
+
+/* ===========================
+   AVAILABLE PUPPIES
+=========================== */
+
+.available{
+    padding:120px 8%;
+    background:#fdfbf8;
+}
+
+.puppy-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:35px;
+}
+
+.puppy-card{
+    background:#fff;
+    border-radius:25px;
+    overflow:hidden;
+    box-shadow:var(--shadow);
+    transition:.35s;
+    position:relative;
+}
+
+.puppy-card:hover{
+    transform:translateY(-10px);
+}
+
+.badge{
+    position:absolute;
+    top:20px;
+    right:20px;
+    background:var(--gold);
+    color:#fff;
+    padding:8px 16px;
+    border-radius:30px;
+    font-size:14px;
+    font-weight:700;
+}
+
+.puppy-card img{
+    width:100%;
+    height:340px;
+    object-fit:cover;
+}
+
+.puppy-info{
+    padding:25px;
+}
+
+.puppy-info h3{
+    color:var(--brown);
+    margin-bottom:12px;
+}
+
+.price{
+    font-size:28px;
+    color:var(--gold);
+    font-weight:800;
+    margin:20px 0;
+}/* ===========================
+   GALLERY
+=========================== */
+
+.gallery{
+    padding:120px 8%;
+    background:#fff;
+}
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.gallery-grid img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+    border-radius:20px;
+    box-shadow:var(--shadow);
+    transition:.35s;
+}
+
+.gallery-grid img:hover{
+    transform:scale(1.05);
+}
+
+/* ===========================
+   REVIEWS
+=========================== */
+
+.reviews{
+    padding:120px 8%;
+    background:#f8f4ed;
+}
+
+.review-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+}
+
+.review-card{
+    background:#fff;
+    padding:40px;
+    border-radius:25px;
+    box-shadow:var(--shadow);
+    transition:.3s;
+}
+
+.review-card:hover{
+    transform:translateY(-8px);
+}
+
+.review-card p{
+    margin:20px 0;
+    color:#666;
+    line-height:1.8;
+}
+
+.review-card h4{
+    color:var(--brown);
+}
+
+/* ===========================
+   APPLICATION FORM
+=========================== */
+
+.application{
+    padding:120px 8%;
+    background:#fff;
+}
+
+.application-box{
+    max-width:1000px;
+    margin:auto;
+    background:#fff;
+    border-radius:30px;
+    padding:50px;
+    box-shadow:var(--shadow);
+}
+
+.form-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+    margin-bottom:25px;
+}
+
+.input-box{
+    margin-bottom:25px;
+}
+
+.input-box label{
+    display:block;
+    font-weight:600;
+    margin-bottom:10px;
+    color:var(--brown);
+}
+
+.input-box input,
+.input-box select,
+.input-box textarea{
+    width:100%;
+    padding:16px;
+    border:1px solid #ddd;
+    border-radius:15px;
+    font-size:16px;
+    font-family:'Poppins',sans-serif;
+}
+
+.input-box textarea{
+    min-height:160px;
+    resize:vertical;
+}
+
+.radio-group{
+    display:flex;
+    flex-wrap:wrap;
+    gap:25px;
+    margin:20px 0 30px;
+}
+
+.radio-group label{
+    font-weight:600;
+}/* ===========================
+   DELIVERY
+=========================== */
+
+.delivery{
+    padding:120px 8%;
+    background:#f8f4ed;
+}
+
+.delivery-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.delivery-card{
+    background:#fff;
+    padding:40px;
+    border-radius:25px;
+    text-align:center;
+    box-shadow:var(--shadow);
+    transition:.3s;
+}
+
+.delivery-card:hover{
+    transform:translateY(-8px);
+}
+
+.delivery-card h3{
+    color:var(--brown);
+    margin:20px 0;
+}
+
+/* ===========================
+   PAYMENTS
+=========================== */
+
+.payments{
+    padding:120px 8%;
+    background:#fff;
+}
+
+.payment-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.payment-card{
+    background:#fff;
+    border-radius:20px;
+    padding:35px;
+    text-align:center;
+    box-shadow:var(--shadow);
+    transition:.3s;
+}
+
+.payment-card:hover{
+    transform:translateY(-8px);
+}
+
+.payment-card img{
+    width:70px;
+    height:70px;
+    object-fit:contain;
+    margin:0 auto 20px;
+}
+
+/* ===========================
+   FAQ
+=========================== */
+
+.faq{
+    padding:120px 8%;
+    background:#f8f4ed;
+}
+
+.faq-item{
+    background:#fff;
+    margin-bottom:20px;
+    padding:30px;
+    border-radius:18px;
+    box-shadow:var(--shadow);
+}
+
+.faq-item h3{
+    color:var(--brown);
+    margin-bottom:12px;
+}
+
+/* ===========================
+   CONTACT
+=========================== */
+
+.contact{
+    padding:120px 8%;
+    background:#fff;
+}
+
+.contact-box{
+    max-width:700px;
+    margin:auto;
+    text-align:center;
+    background:#fff;
+    padding:50px;
+    border-radius:25px;
+    box-shadow:var(--shadow);
+}
+
+.contact-box p{
+    margin-bottom:15px;
+    font-size:18px;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+    background:#3b2b22;
+    color:#fff;
+    text-align:center;
+    padding:60px 20px;
+}
+
+footer h2{
+    color:var(--gold);
+    margin-bottom:15px;
+}
+
+footer p{
+    opacity:.9;
+    margin-bottom:10px;
+}
+
+/* ===========================
+   WHATSAPP BUTTON
+=========================== */
+
+.whatsapp-float{
+    position:fixed;
+    right:25px;
+    bottom:25px;
+    width:65px;
+    height:65px;
+    border-radius:50%;
+    background:#25D366;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    font-size:30px;
+    box-shadow:0 8px 20px rgba(0,0,0,.25);
+    z-index:9999;
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media(max-width:900px){
+
+header .container,
+.about,
+.health,
+.form-row{
+    display:block;
+}
+
+nav{
+    flex-wrap:wrap;
+    justify-content:center;
+    margin-top:20px;
+}
+
+.hero h2{
+    font-size:42px;
+}
+
+.section-title h2{
+    font-size:34px;
+}
+
+.stats{
+    grid-template-columns:1fr 1fr;
+}
+
+.about,
+.health{
+    padding:80px 6%;
+}
+
+.application-box{
+    padding:30px;
+}
+
+}/* ==================================
+   STYLE PART 5 - FINISHING TOUCHES
+================================== */
+
+/* Smooth section spacing */
+
+section{
+    padding-top:110px;
+    padding-bottom:110px;
+}
+
+/* Better images */
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+/* Card Hover */
+
+.why-card,
+.meet-card,
+.puppy-card,
+.review-card,
+.payment-card,
+.delivery-card,
+.contact-box,
+.application-box{
+
+transition:all .35s ease;
+
+}
+
+.why-card:hover,
+.meet-card:hover,
+.puppy-card:hover,
+.review-card:hover,
+.payment-card:hover,
+.delivery-card:hover,
+.contact-box:hover,
+.application-box:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 25px 50px rgba(0,0,0,.15);
+
+}
+
+/* Buttons */
+
+.btn,
+.btn-outline,
+.header-btn{
+
+cursor:pointer;
+
+transition:.35s;
+
+}
+
+.btn:hover,
+.header-btn:hover{
+
+transform:translateY(-3px) scale(1.03);
+
+}
+
+.btn-outline:hover{
+
+transform:translateY(-3px);
+
+}
+
+/* Inputs */
+
+input:focus,
+select:focus,
+textarea:focus{
+
+outline:none;
+
+border:2px solid var(--gold);
+
+box-shadow:0 0 10px rgba(200,164,93,.3);
+
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar{
+
+width:10px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:var(--gold);
+
+border-radius:20px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#eee;
+
+}
+
+/* Footer Links */
+
+footer a{
+
+color:#fff;
+
+text-decoration:none;
+
+}
+
+footer a:hover{
+
+color:var(--gold);
+
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.hero h2{
+
+font-size:38px;
+
+}
+
+.hero p{
+
+font-size:18px;
+
+}
+
+.stats{
+
+grid-template-columns:1fr;
+
+}
+
+.puppy-grid,
+.meet-grid,
+.review-grid,
+.gallery-grid,
+.payment-grid,
+.delivery-grid,
+.why-container{
+
+grid-template-columns:1fr;
+
+}
+
+.hero-buttons{
+
+flex-direction:column;
+
+align-items:center;
+
+}
+
+nav{
+
+gap:15px;
+
+}
+
+.logo h1{
+
+font-size:24px;
+
+}
+
+}/* Animation */
+
+.hidden{
+
+opacity:0;
+
+transform:translateY(40px);
+
+transition:all .8s ease;
+
+}
+
+.show{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
