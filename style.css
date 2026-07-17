@@ -426,18 +426,20 @@ nav a:hover{
     grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
     gap:35px;
 }
-
 .puppy-card{
     background:#fff;
     border-radius:25px;
     overflow:hidden;
-    box-shadow:var(--shadow);
-    transition:.35s;
+    box-shadow:0 12px 35px rgba(0,0,0,.12);
+    transition:all .35s ease;
     position:relative;
+    border:1px solid rgba(0,0,0,.05);
 }
 
 .puppy-card:hover{
-    transform:translateY(-10px);
+    transform:translateY(-12px);
+    box-shadow:0 20px 45px rgba(0,0,0,.18);
+}
 }
 
 .badge{
@@ -1095,4 +1097,70 @@ transform:translateY(0);
   .puppy-grid{
     grid-template-columns: repeat(2, 1fr);
   }
+}/* TESTIMONIALS */
+
+.testimonials{
+    padding:80px 20px;
+    background:#fff8f0;
+}
+
+.testimonial-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+    margin-top:50px;
+}
+
+.testimonial-card{
+    background:#fff;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+    transition:.3s ease;
+    text-align:center;
+}
+
+.testimonial-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 40px rgba(0,0,0,.15);
+}
+
+.testimonial-card p{
+    font-size:17px;
+    line-height:1.7;
+    color:#555;
+    margin-bottom:20px;
+}
+
+.testimonial-card h4{
+    color:#D4AF37;
+    font-size:22px;
+    margin-bottom:10px;
+}
+
+.testimonial-card strong{
+    color:#8B5E3C;
+}/* FAQ */
+
+.faq{
+    padding:80px 20px;
+    background:#fff;
+}
+
+.faq-box{
+    max-width:900px;
+    margin:50px auto 0;
+}
+
+.faq-box h3{
+    color:#8B5E3C;
+    margin-top:30px;
+    margin-bottom:10px;
+    font-size:22px;
+}
+
+.faq-box p{
+    color:#666;
+    line-height:1.8;
+    margin-bottom:20px;
 }
