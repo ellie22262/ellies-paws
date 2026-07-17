@@ -38,9 +38,10 @@ img{
 }
 
 .container{
-  width:90%;
-  max-width:1300px;
+  width:92%;
+  max-width:1400px;
   margin:auto;
+}
 }
 
 /* HEADER */
@@ -102,7 +103,7 @@ nav a:hover{
 .hero{
   min-height:100vh;
   background:
-  linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+  linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
   url("images/hero.jpg");
   background-size:cover;
   background-position:center;
@@ -110,40 +111,47 @@ nav a:hover{
   align-items:center;
   justify-content:center;
   text-align:center;
-  padding:120px 20px;
+  padding:140px 20px 100px;
+}
 }
 
 .hero-content{
-  max-width:850px;
+  max-width:900px;
   color:#fff;
 }
 
 .welcome{
   display:inline-block;
-  padding:10px 24px;
-  border-radius:30px;
-  background:rgba(255,255,255,.15);
-  margin-bottom:25px;
+  padding:12px 28px;
+  border-radius:40px;
+  background:rgba(255,255,255,.18);
+  margin-bottom:30px;
   letter-spacing:2px;
   font-size:14px;
+  font-weight:600;
 }
 
 .hero h2{
-  font-size:64px;
+  font-size:58px;
   font-weight:800;
-  line-height:1.2;
+  line-height:1.15;
   margin-bottom:25px;
+  letter-spacing:-1px;
+}
 }
 
 .hero p{
-  font-size:22px;
-  margin-bottom:40px;
+  max-width:700px;
+  margin:0 auto 45px;
+  font-size:20px;
+  line-height:1.7;
+  color:rgba(255,255,255,.92);
 }
 
 .hero-buttons{
   display:flex;
   justify-content:center;
-  gap:20px;
+  gap:18px;
   flex-wrap:wrap;
 }
 
@@ -151,10 +159,12 @@ nav a:hover{
 .btn-outline{
   display:inline-block;
   text-decoration:none;
-  padding:16px 36px;
+  padding:17px 38px;
   border-radius:50px;
   font-weight:700;
-  transition:.3s;
+  font-size:16px;
+  transition:.3s ease;
+}
 }
 
 .btn{
@@ -444,7 +454,7 @@ nav a:hover{
 
 .puppy-card img{
     width:100%;
-    height:340px;
+    height:260px;
     object-fit:cover;
 }
 
@@ -750,6 +760,40 @@ footer p{
 =========================== */
 
 @media(max-width:900px){
+	.hero{
+  min-height:90vh;
+  padding:120px 20px 80px;
+}
+
+.hero-content{
+  max-width:100%;
+}
+
+.welcome{
+  font-size:12px;
+  padding:10px 20px;
+}
+
+.hero h2{
+  font-size:38px;
+  line-height:1.2;
+}
+
+.hero p{
+  font-size:18px;
+  line-height:1.6;
+}
+
+.hero-buttons{
+  flex-direction:column;
+  align-items:center;
+}
+
+.btn,
+.btn-outline{
+  width:90%;
+  max-width:320px;
+}
 
 header .container,
 .about,
@@ -1009,5 +1053,46 @@ transform:translateY(0);
   .trust-item {
     width: 45%;
     font-size: 14px;
+  }
+}/* Contact Buttons */
+.contact-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.contact-btn {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  padding: 15px;
+  border-radius: 12px;
+  font-size: 17px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.email-btn {
+  background: #8B5E3C;
+  color: white;
+}
+
+.whatsapp-btn {
+  background: #25D366;
+  color: white;
+}
+
+.call-btn {
+  background: #D4AF37;
+  color: white;
+}
+
+.contact-btn:hover {
+  transform: translateY(-3px);
+  opacity: 0.95;
+}@media (min-width: 900px){
+  .puppy-grid{
+    grid-template-columns: repeat(2, 1fr);
   }
 }
