@@ -86,3 +86,8 @@ btn.style.transform="translateY(0)";
 });
 
 });
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", function () {
+    navigator.serviceWorker.register("service-worker.js");
+  });
+}	

@@ -1,0 +1,15 @@
+{
+  "name": "Ellie's Tiny Paws",
+  "short_name": "Ellie's Paws",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#FAF7F2",
+  "theme_color": "#8B5E3C",
+  "icons": [
+    {
+      "src": "icons/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
